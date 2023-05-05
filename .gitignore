@@ -4,3 +4,10 @@ css/.DS_Store
 node_modules/
 .sass-cache
 npm-debug.log
+yarn.lock
+css/bundlecss.css
+css/editor.css
+javascript/bundle.js
+javascript/bundlecss.js
+javascript/editor.js
+css/bundlecss.css

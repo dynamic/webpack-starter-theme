@@ -1,0 +1,36 @@
+{
+    "name": "dynamic/webpack-starter-theme",
+    "description": "Starter theme for most Dynamic websites using Bootstrap 5.",
+    "license": "MIT",
+    "type": "silverstripe-theme",
+    "keywords": [
+        "bootstrap",
+        "css",
+        "js",
+        "sass",
+        "mobile-first",
+        "responsive",
+        "front-end",
+        "framework",
+        "web"
+    ],
+    "authors": [
+        {
+            "name": "Dynamic",
+            "email": "dev@dynamicagency.com",
+            "homepage": "https://www.dynamicagency.com"
+        }
+    ],
+    "support": {
+        "issues": "https://github.com/dynamic/webpack-starter-theme/issues"
+    },
+    "extra": {
+        "expose": [
+            "css",
+            "javascript",
+            "src",
+            "fonts",
+            "images"
+        ]
+    }
+}
