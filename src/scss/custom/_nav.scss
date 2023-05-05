@@ -1,0 +1,66 @@
+nav.navbar {
+    font-family: lft-etica-compressed, sans-serif; font-weight: 600; font-style: normal; text-transform: uppercase; font-size: 20px;
+    @include media-breakpoint-up(lg){ padding-top: 3.5rem;}
+    @include media-breakpoint-down(sm){ padding: 0 1rem;}
+    .icon-bar {display: block; width: 22px; height: 2px; border-radius: 1px; background: $primary;
+        + .icon-bar {margin-top: 4px;}
+    }
+    a.navbar-brand {color: $primary; white-space: normal;
+        &:visited {color: $primary;}
+        &:hover, &:focus {color: $link-hover-color}
+        * {color: inherit;}
+    }
+    .navbar-toggler{
+        background-color: $primary;
+    }
+    ul.navbar-nav {
+        li { position: relative;
+            a.nav-link, a.nav-link:visited {display: block; padding-bottom: 5px; color: $secondary;
+                &.last{ padding-right: 0;}
+            }
+            &:hover a.nav-link, a.nav-link:hover, &.section a.nav-link, &.current a.nav-link {color: $navbar-light-hover-color;}
+            .dropdown-toggle {margin-left: 5px; display: none; color: $primary; height: 30px;
+                @include media-breakpoint-down(md) {position: absolute; top: 7px; right: 0; z-index: 99; display: block; width: 30px; text-align: right;}
+            }
+            &.last-parent {
+                .dropdown-menu {left: auto; right: 0;}
+            }
+        }
+        &.nav-utility {
+            @include media-breakpoint-up(lg){ position: absolute; top: 0; right: 0; width: 100%; justify-content: flex-end; background-image: linear-gradient(#1B4965,#0E2533);
+                &:before{
+                    content:"";
+                    background-image: linear-gradient(#1B4965,#0E2533);
+                    position: absolute;
+                    height: 100%;
+                    width: 4000px;
+                    left: -2000px;
+                    top: 0;
+                    z-index: -1;
+                }
+            }
+            li {
+                @include media-breakpoint-up(lg){ padding: .5rem 0;}
+                a.nav-link, a.nav-link:visited {padding: 2px 20px; color: $white;
+                    @include media-breakpoint-down(lg){ color: $primary;}
+                }
+                &:hover a.nav-link, a.nav-link:hover, &.section a.nav-link, &.current a.nav-link {text-decoration: underline; background: none;}
+                &.icon {
+                    a.nav-link, a.nav-link:visited {padding: 2px 10px;}
+                }
+                &.last-parent{
+                    @include media-breakpoint-up(lg){ background-color: #F47F31;}
+                }
+            }
+            @include media-breakpoint-down(md) {position: relative; top: auto; right: auto;}
+        }
+    }
+    @include media-breakpoint-up(lg) {
+        .navbar-collapse{ justify-content: flex-end; }
+        li.dropdown {
+            &:hover {
+                .dropdown-menu {display: block; margin-top: 0;}
+            }
+        }
+    }
+}

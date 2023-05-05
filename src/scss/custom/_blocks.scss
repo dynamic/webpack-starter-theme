@@ -1,0 +1,151 @@
+.element-area {
+    .element { width: 100%; margin-top: 30px; margin-bottom: 30px;
+        + .element {}
+        .element__title{color: $primary;}
+
+        &.elementlist + .element.elementlist { }
+        &.elementoembed {
+            #oembed{ 
+                .oembed{
+                    &__content{ 
+                        .element__title{ color: $secondary; }
+                    }
+                    &__video{
+                        iframe{ width: 100%; height: 330px; }
+                    }
+                }
+            }
+            .embed-responsive {margin-bottom: $spacer;}
+        }
+        &.bannerblock {position: relative; width: 100%; align-items: center; justify-content: center; margin-top: -30px; margin-bottom: 0;
+            @include media-breakpoint-up(lg){ max-height: 550px;}
+            .banner-element__image { background-color: #eee;  display: flex; flex-grow: 1; height: 550px;
+                img { border: none; object-fit: cover; width: 100%; height: auto;}
+            }
+            .banner-element__content { left: 10%; position: absolute; top: 50%; transform: translate(0,-50%); width: auto;
+                &.no-image{ position: relative; display: block; left: unset; right: unset; top: unset; bottom: unset; transform: none; width: 100%;} 
+                @include media-breakpoint-up(xl){ width: 40%; right: 10%; left: unset;}
+                @include media-breakpoint-down(lg){ position: relative; display: block; transform: none; left: unset; top: unset; width: 100%;}
+                .element__title-script{ color: $white;}
+                .banner-element__title{ font-size: 50px; color: $secondary;}
+            }
+            .banner-element__call-to-action { padding: 10px; background: red; color: white !important; display: inline-block; text-decoration: none; margin-bottom: 10px;
+                &:hover {border: none !important;}
+            }
+        }
+        &.elementaccordion {
+            .card {border-bottom: none;
+                &:last-child {border-bottom: $card-border-width solid $card-border-color;}
+                .card-header {border-color: $card-border-color;;
+                    &.collapsed {border-bottom: none;}
+                }
+            }
+        }
+        &.elementphotogallery {
+            .photogallery-holder {margin-bottom: $grid-gutter-width;}
+        }
+        &.elementpromos {
+            .title-holder{ padding-top: 3rem; 
+                .element__title{ color: $primary; }
+            }
+            .promo { margin-bottom: 4rem; 
+                a{ text-decoration: none;
+                    &:hover{ text-decoration: underline;}
+                }
+                &__image {margin-bottom: $spacer; border-radius: 0; height: 320px; object-fit: cover; }
+                .card{ border-radius: 0; padding: 0 10px; border: none;
+                    .card-body{ text-align: center;
+                        .card-title{ }
+                    }
+                }
+            }
+        }
+        &.elementfeatures {
+            .element__title{ color: $secondary; 
+                &-script{ color: $white;}
+            }
+            .title-holder{ }
+            .features{
+                .features__feature { display: flex; align-items: center;
+                    @include media-breakpoint-down(md){ flex-direction: column;}
+                    + .features__feature {margin-top: $spacer*2;}
+
+                    .text-side{
+                        padding: 4rem 0; text-align: center;
+                        .element__title{ width: 80%; margin: auto; line-height: normal;}
+                        .element__content{ width: 70%; margin: auto; padding-bottom: 1rem;}
+                    }
+                    .img-side{ padding: 0 0;
+                        img{ height: auto; width: 100%; object-fit: cover;}
+                    }
+                }
+            }
+        }
+        &.elementblogposts {
+            .blog-posts { padding: 4rem 0;}
+            .blog-posts__post { margin-bottom: 4rem; 
+                a{ text-decoration: none;
+                    &:hover{ text-decoration: underline;}
+                }
+                &__image {margin-bottom: $spacer; border-radius: 0; height: 320px; object-fit: cover; }
+                .card{ border-radius: 0; padding: 0 0; border: none;
+                    .card-body{ text-align: left;
+                        .card-title{ }
+
+                        .modal{
+                            .modal-content{ text-align: left;}
+                        }
+                    }
+                }
+            }
+            .blog-posts__view-all {margin-top: 30px; text-align: center;}
+        }
+        &.elementfilelist {
+            .file-list {justify-content: center; }
+            .file-list__file + .file-list__file {
+                @include media-breakpoint-down(md) {margin-top: 15px;}
+            }
+            span.filetype {flex: 0 1 0; padding-right: 5px;
+                a {
+                    &::before {font-size: 35px;}
+                }
+            }
+        }
+        &.elementcountdown {text-align: center;
+            .countdown-holder {display: flex; width: 100%; justify-content: center;
+                > div { text-transform: uppercase; font-size: 14px;
+                    + div {margin-left: 12px;}
+                    > span {color: theme-color('primary'); font-size: 25px; margin-right: 2px;}
+                }
+            }
+        }
+        &.elementcontent{ 
+            .element__title-script{ }
+            .element__content{ width: 100%; margin: auto; }
+        }
+        &.elementsponsor{
+            .title-holder{ padding-top: 3rem; 
+                .element__title{ color: $primary; }
+            }
+        }
+        &.elementtestimonials{
+            .element__title{ color: $secondary;}
+            .testimonial-splide{
+                .blockquote{ 
+                    &-footer{ color: $white; font-weight: bold; }
+                }
+            }
+        }
+        &.linkselement{
+            .element__links__list{ }
+        }
+    }
+
+    &.home-element-area {
+        .element {}
+    }
+    &.main-element-area {margin-top: $spacer*2;}
+    &.side-element-area {
+        .element {}
+    }
+}

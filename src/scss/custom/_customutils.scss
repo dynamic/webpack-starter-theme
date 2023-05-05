@@ -1,0 +1,12 @@
+#SilverStripeNavigatorMessage { padding: 0px !important; right: 0 !important; top: 0 !important; font-size: 8px !important; }
+
+.vert-outer {display: table; width: 100%; height: 100%; overflow: hidden;
+    .vert-inner { display: table-cell; vertical-align: middle; width: 100%; margin: 0 auto; text-align: center;}
+}
+
+.vert-centering {position: absolute; top: 50%; transform: translateY(-50%);
+    @include media-breakpoint-down(md) {position:relative; top: auto; transform: translateY(0);}
+}
+.vert-centering-reset, body.loading .vert-centering {position: relative; top: auto; transform: translateY(0);}
+
+.img-responsive, .scale-with-grid {@extend .img-fluid;}

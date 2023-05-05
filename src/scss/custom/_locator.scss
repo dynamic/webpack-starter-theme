@@ -1,0 +1,37 @@
+#map-container {height: 530px;
+    @include media-breakpoint-down(sm) {height: auto;}
+    ul#list {list-style-type: none; padding: 0; margin: 0;}
+    #map {height: 530px;
+        @include media-breakpoint-down(sm) {height: 300px;}
+    }
+    .loc-list {height: 530px; overflow: auto;
+        @include media-breakpoint-down(sm) {height: auto;}
+        .list-label { float: left; margin: 10px 0 0 6px; padding: 2px 3px; width: 27px; text-align: center; background: $secondary; color: $white; font-weight: bold; }
+        .list-details { float: left; margin-left: 6px; width: 165px; }
+        .list-content { padding: 10px; }
+        .loc-name { color: $primary; font-weight: bold; }
+        .loc-dist { font-weight: bold; font-style: italic; color: #8e8e8e; }
+        li { display: block; clear: left; float: left; margin: 6px 0; cursor: pointer; width: 99%; border: 1px solid transparent;}
+        li:first-child {margin-top: 0px;}
+        .list-focus { border: 1px solid rgba($secondary,0.9); transition: border 0.2s linear 0s, box-shadow 0.2s linear 0s; }
+    }
+    a, a:visited {color: $primary; text-decoration: none;}
+    a:hover, a:focus, a:active {text-decoration: underline;}
+}
+
+.form-container {
+    @include media-breakpoint-down(sm) {margin-bottom: 30px;}
+    fieldset, div.Actions, .btn-toolbar {float: left;
+        @include media-breakpoint-down(sm) {float: none;}
+    }
+    fieldset { width: 80%;
+        @include media-breakpoint-down(sm) {width: 100%;}
+    }
+    div.Actions, .btn-toolbar { width: 20%;
+        @include media-breakpoint-down(sm) {width: 100%;}
+        .btn {width: 100%;}
+    }
+    div.field { width: 30%; margin-right: 3%; float: left; vertical-align: middle;
+        @include media-breakpoint-down(sm) {width: 100%; margin-right: 0;}
+    }
+}

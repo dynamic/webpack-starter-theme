@@ -1,0 +1,12 @@
+.social-sharing {
+    p {margin-bottom: 5px;}
+    ul {list-style-type: none; margin: 0; padding: 0;margin: 0 -4px; font-size: 0;
+        li {display: inline-block; font-size: 14px; padding: 0 4px;
+            a, a:visited {width: 25px; height: 25px; display: block; background: $primary; border-radius: 50%; color: $white; text-align: center;
+                i.fab, i.far {height: 100%; width: 100%; display: table;}
+                i.fab::before, i.far::before {display: table-cell; vertical-align: middle;}
+            }
+            a:hover, a:focus {background: $link-hover-color; text-decoration: none;}
+        }
+    }
+}

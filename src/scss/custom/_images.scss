@@ -1,0 +1,25 @@
+/* IMAGES
+-------------------------------------------- */
+.typography {
+    img {max-width: 100%; height: auto;
+        &.left {float: left; max-width: 50%; height: auto; margin: 5px 20px 10px 0;}
+        &.right {float: right; max-width: 50%; height: auto; margin: 5px 0 10px 20px;}
+        &.leftAlone {float: none; display: block; margin-bottom: 10px;}
+        &.center {float: none; margin-left: auto; margin-right: auto; display: block; margin-bottom: 10px; clear: both;}
+    }
+
+    .captionImage {
+        &.center {width: 100% !important;}
+        &.right {float: right; max-width: 50%;
+            img {float: none; clear: both; max-width: 95% !important;}
+            p {margin-left: 5%;}
+        }
+        &.left {float: left; max-width: 50%;
+            img {float: none; clear: both; max-width: 95% !important;}
+        }
+        &.left, &.right {
+            p {max-width: 95% !important;}
+        }
+        p {display: block; width: 100%; text-align: center;}
+    }
+}
