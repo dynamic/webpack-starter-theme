@@ -4,11 +4,8 @@
     </span>
 <% end_if %>
 
-<% if $Title && $ShowTitle || $Content || $BrushScript %>
+<% if $Title && $ShowTitle || $Content  %>
     <div class="banner-element__content  <% if not $File %>no-image<% end_if %>">
-        <% if $BrushScript %>
-            <div class="element__title-script">$BrushScript</div>
-        <% end_if %>
         <% if $Title && $ShowTitle %>
             <h2 class="banner-element__title element__title">$Title</h2>
         <% end_if %>

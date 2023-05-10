@@ -1,6 +1,6 @@
 .btn {text-transform: uppercase; min-width: 150px; font-size: 20px;  font-family: lft-etica-compressed, sans-serif; font-weight: 700; font-style: normal; text-transform: uppercase;  border-radius: 0; padding: 14px;
 
-    &.btn-primary{background: transparent; border: 3px solid #F47F31; color: $white; background-position: 0 -100%; background-repeat: repeat-x; transition: background-position 1s ease;
+    &.btn-primary{background: $primary; color: $white; background-position: 0 -100%; background-repeat: repeat-x; transition: background-position 1s ease;
         &:hover, &:focus {background: $secondary;}
     }
 
@@ -8,17 +8,13 @@
 
     }
 
-    &.btn-outline {background: transparent; border: 3px solid #F47F31; color: $secondary; background-position: 0 -100%; background-repeat: repeat-x; transition: background-position 1s ease;
+    &.btn-outline {background: transparent; border: 3px solid $primary; color: $primary; background-position: 0 -100%; background-repeat: repeat-x; transition: background-position 1s ease;
         &:hover, &:focus {background: $secondary; color: $white;}
-    }
-
-    &.btn-modal { color: #04C3C0; min-width: unset !important; padding: 14px 0;
-        
     }
 }
 
 .btn-toolbar{
-    .btn-primary{ background: transparent; border: 3px solid #F47F31; color: $secondary; background-position: 0 -100%; background-repeat: repeat-x; transition: background-position 1s ease;
+    .btn-primary{ background: transparent; border: 3px solid $primary; color: $primary; background-position: 0 -100%; background-repeat: repeat-x; transition: background-position 1s ease;
         &:hover, &:focus {background: $secondary; color: $white;}
     }
 }

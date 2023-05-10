@@ -83,13 +83,20 @@ html[xmlns] .slides {display: block;}
 }
 
 .header { position: relative;
-    .slide-text { position: absolute; top: 50%; transform: translateY(-50%); width: auto; color: $white; background-image: linear-gradient(#1B4965,#0E2533); padding: 4rem; text-align: center;
-        @include media-breakpoint-up(xl){ width: 40%; right: 10%; left: 10%;}
+    .slide-text { position: absolute; top: 50%; transform: translateY(-50%); width: 100%; color: $white; padding: 4rem; text-align: center; z-index: 10;
+        @include media-breakpoint-up(xl){ width: 100%;}
         @include media-breakpoint-down(lg){ position: relative; display: block; transform: none; left: unset; top: unset; width: 100%;}
-        h1{ color: $secondary;}
-        .element__title{ font-family: lft-etica-compressed, sans-serif; font-weight: 700; font-style: normal; text-transform: uppercase; font-size: 50px;}
-        .element__title-script{ font-family: modern-love, sans-serif; color: $secondary; font-size: 50px; margin-bottom: -1rem;}
+        h1{ }
+        .element__title{ font-family: lft-etica-compressed, sans-serif; font-weight: 700; font-style: normal; text-transform: uppercase; }
         .typography{ }
+    }
+    &__overlay{
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 100%;
+        width: 100%;
+        background: rgba(16,24,32,0.3);
     }
 }
 

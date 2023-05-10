@@ -101,11 +101,13 @@
             </div>
         </div>
     </div>
+    <% if $SiteConfig.CopyrightLabel %>
     <div id="copyright">
         <div class="container">
             <div class="col-sm-12 copyright-text">
-                <p><% if $SiteConfig.CopyrightLabel %>&copy; $Now.Year $SiteConfig.CopyrightLabel<% else %>&copy; $Now.Year Sully's Ride Shop<% end_if %></p>
+                <p><% if $SiteConfig.CopyrightLabel %>&copy; $Now.Year $SiteConfig.CopyrightLabel<% end_if %></p>
             </div>
         </div>
     </div>
+    <% end_if %>
 </div>

@@ -11,7 +11,7 @@
         <% if $ElementLink.LinkURL %></a><% end_if %>
     </div>
     <div class="col-md-12 col-lg-6<% if $Odd %> order-lg-first<% end_if %> text-side">
-        <% if $Title %><div class='element__title'>$Title</div><% end_if %>
+        <% if $Title %><h2 class='element__title'>$Title</h2><% end_if %>
         <% if $Content %>
             <div class='element__content typography'>$Content</div>
         <% else %>

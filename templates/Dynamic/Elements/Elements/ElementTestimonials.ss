@@ -2,9 +2,6 @@
     <% if $Title && $ShowTitle || $Content %>
         <div class="row title-holder">
             <div class="col-md-12 text-center">
-                <% if $BrushScript %>
-                    <div class="element__title-script">$BrushScript</div>
-                <% end_if %>
                 <% if $Title && $ShowTitle %><h2 class="element__title">$Title</h2><% end_if %>
                 <% if $Content %><div class="element__content">$Content</div><% end_if %>
             </div>
@@ -38,6 +35,6 @@
     <% end_if %>
 </div>
 
-<% require javascript($resourceURL('themes/dynamic/javascript/splide.min.js')) %>
-<% require javascript($resourceURL('themes/dynamic/javascript/splide-extension-auto-scroll.min.js')) %>
-<% require javascript($resourceURL('themes/dynamic/src/javascript/carouselTestimonial.js')) %>
+<% require javascript($resourceURL('themes/webpack-starter-theme/javascript/splide.min.js')) %>
+<% require javascript($resourceURL('themes/webpack-starter-theme/javascript/splide-extension-auto-scroll.min.js')) %>
+<% require javascript($resourceURL('themes/webpack-starter-theme/src/javascript/carouselTestimonial.js')) %>

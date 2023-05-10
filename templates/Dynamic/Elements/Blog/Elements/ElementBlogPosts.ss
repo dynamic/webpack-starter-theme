@@ -2,9 +2,6 @@
     <% if $Title && $ShowTitle || $Content %>
         <div class="row title-holder">
             <div class="col-md-12 text-center">
-                <% if $BrushScript %>
-                    <div class="element__title-script">$BrushScript</div>
-                <% end_if %>
                 <% if $Title && $ShowTitle %><h2 class="element__title">$Title</h2><% end_if %>
                 <% if $Content %><div class="element__content">$Content</div><% end_if %>
             </div>
@@ -12,7 +9,7 @@
     <% end_if %>
 
     <% if $PostsList %>
-            <div class="row mt-5 blog-posts">
+            <div class="row blog-posts">
                 <% loop $PostsList %>
                     <div class="col-md-6 col-lg-4 d-flex align-items-stretch blog-posts__post">
                     <% if $Link %><a href="$Link" title="Go to $Title.ATT"><% end_if %>

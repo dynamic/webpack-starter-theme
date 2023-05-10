@@ -1,11 +1,8 @@
-<% if $EmbeddedObject || $Title && $ShowTitle || $BrushScript || $EmbeddedObject.Description %>
+<% if $EmbeddedObject || $Title && $ShowTitle || $EmbeddedObject.Description %>
 <div id="oembed">
     <div class="container">
         <div class="row align-items-center">
             <div class="col-md-6 oembed__content">
-                <% if $BrushScript %>
-                    <div class="element__title-script">$BrushScript</div>
-                <% end_if %>
                 <% if $Title && $ShowTitle %><h2 class="element__title">$Title</h2><% else_if $EmbeddedObject.Title %><h2 class="element__title">$EmbeddedObject.Title</h2><% end_if %>
                 <% if $EmbeddedObject.Description %><p>$EmbeddedObject.Description</p><% end_if %>
             </div>

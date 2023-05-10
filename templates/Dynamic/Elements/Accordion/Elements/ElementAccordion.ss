@@ -1,10 +1,7 @@
 <div class="container">
-    <% if $Title && $ShowTitle || $Content || $BrushScript %>
+    <% if $Title && $ShowTitle || $Content %>
         <div class="row title-holder">
             <div class="col-md-12 text-center">
-                <% if $BrushScript %>
-                    <div class="element__title-script">$BrushScript</div>
-                <% end_if %>
                 <% if $Title && $ShowTitle %><h2 class="element__title">$Title</h2><% end_if %>
                 <% if $Content %><div class="element__content">$Content</div><% end_if %>
             </div>
@@ -24,7 +21,7 @@
                             <div id="Body{$Up.ID}-{$ID}" class="collapse<% if $First %> show<% end_if %>" role="tabpanel" aria-labelledby="Header{$Up.ID}-{$ID}" data-parent="#accordion">
                                 <div class="card-body">
                                     <% if $Image %>
-                                        <img src="" data-src="$Image.URL" alt="$Image.Title.ATT" class="img-fluid lazy" >
+                                        <img src="$Image.Fill(576,300).URL" data-src="$Image.URL" alt="$Image.Title.ATT" class="img-fluid lazy" >
                                     <% end_if %>
                                     <% if $Content %><div class="typography">$Content</div><% end_if %>
                                     <% if $ElementLink %>$ElementLink<% end_if %>

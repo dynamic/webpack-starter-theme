@@ -10,7 +10,7 @@
                     <img src="$Logo.URL" class="img-fluid" alt="$Logo.Title">
                 <% end_if %>
             <% else %>
-                <img src="$ThemeDir/images/DynamicLogo.svg" width="auto" height="125" class="img-fluid" alt="Dynamic Agency Logo"  onerror="this.onerror=null; this.src='$ThemeDir/images/DynamicLogo.png'">
+                <!--<img src="$ThemeDir/images/DynamicLogo.svg" width="auto" height="125" class="img-fluid" alt="Dynamic Agency Logo"  onerror="this.onerror=null; this.src='$ThemeDir/images/DynamicLogo.png'">-->
             <% end_if %>
         </a>
     <% else %>

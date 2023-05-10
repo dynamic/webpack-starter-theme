@@ -3,9 +3,6 @@
     <div class="container">
         <div class="row">
             <div class="col-md-12 <% if $StyleVariant == style-blue %>text-center<% end_if %>">
-            <% if $BrushScript %>
-                <div class="element__title-script">$BrushScript</div>
-            <% end_if %>
             <% if $Title && $ShowTitle %><h2 class="element__title">$Title</h2><% end_if %>
             <% if $HTML %>
                 <div class="element__content typography">$HTML</div>

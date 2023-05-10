@@ -11,9 +11,13 @@
                 </div>
             </div>
         <% end_if %>
+        <% if $Image %>
+            <div class="row">
+                <div class="col-md-12 text-center">
+                    <img src="$Image.URL" class="img-fluid lazy" alt="$Image.Title.ATT">
+                </div>
+            </div>
+        <% end_if %>
     </div>
 <% end_if %>
 
-<% if $Image %>
-    <img src="$Image.URL" class="img-fluid lazy" alt="$Image.Title.ATT">
-<% end_if %>

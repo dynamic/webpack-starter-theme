@@ -8,9 +8,6 @@
             <% if $Title || $Content || $Top.Content || $HeaderLink %>
                 <div class="slide-text">
                     <div class="inner">
-                        <% if $BrushScript %>
-                            <div class="element__title-script">$BrushScript</div>
-                        <% end_if %>
                         <h1 class="element__title"><% if Title %>$Title<% else %>$Top.Title<% end_if %></h1>
                         <% if $Content || $Top.Content %>
                             <div class="typography"><% if $Content %>$Content<% else_if $Top.Content %>$Top.Content<% end_if %></div>
@@ -24,6 +21,7 @@
                 </div>
             <% end_if %>
         <% end_with %>
+        <div class="header__overlay"></div>
     </div>
 <% else_if $SlideShow %>
     <div class="flexslider">
@@ -38,9 +36,6 @@
                             <div class="container">
                                 <div class="row">
                                     <div class="col-md-12">
-                                        <% if $BrushScript %>
-                                            <div class="element__title-script">$BrushScript</div>
-                                        <% end_if %>
                                         <% if $Headline %><h1>$Headline</h1><% end_if %>
                                         <% if $Description %><p>$Description</p><% end_if %>
                                         <% if $HeaderLink %><p class="mb-0"><a href="$HeaderLink.LinkURL" class="btn btn-primary" title="Go to the $HeaderLink.SiteTree.MenuTitle.XML page">Learn more</a></p><% end_if %>

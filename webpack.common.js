@@ -61,6 +61,7 @@ module.exports = {
             }
         ]
     },
+    watch: true,
     plugins: [
         new MiniCssExtractPlugin(
             {
