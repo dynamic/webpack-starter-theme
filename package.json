@@ -17,6 +17,7 @@
     "eslint-webpack-plugin": "^4.0.1",
     "mini-css-extract-plugin": "^2.7.6",
     "postcss-loader": "^7.3.3",
+    "postcss-scss": "^4.0.7",
     "sass": "^1.66.1",
     "sass-loader": "^13.3.2",
     "style-loader": "^3.3.3",
@@ -30,9 +31,9 @@
     "build": "webpack build --mode=production",
     "dev": "webpack --watch --stats-error-details",
     "lint:styles": "stylelint src/scss/**/*.scss",
-    "lint:styles:fix": "stylelint src/scss/**/*.scss --fix",
-    "lint:scripts": "eslint src/javascript/**/*.js",
-    "lint:scripts:fix": "eslint src/javascript/**/*.js --fix"
+    "lint:styles:fix": "stylelint src/scss/**/*.scss --fix || echo \"lint faild for some file(s).\"",
+    "lint:scripts": "eslint src/js/*.js",
+    "lint:scripts:fix": "eslint src/js/*.js --fix"
   },
   "repository": {
     "type": "git",

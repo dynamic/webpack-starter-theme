@@ -2,7 +2,9 @@ form {
     div, fieldset{
         .field {margin-bottom: $spacer; display: block; width: 100%; position: relative; vertical-align: top;
             &:last-child {margin-bottom: 0;}
+
             &.half {width: 48%; margin-right: 3%; display: inline-block;
+
                 @include media-breakpoint-down(sm) {width: 100%; margin-right: 0; display: block;}
             }
 
@@ -10,11 +12,12 @@ form {
         }
         .field.half + .field.half {margin-right: 0;}
     }
-    fieldset, fieldset > fieldset.form-control {margin-bottom: 0px; background: none; margin-right: 0; width: 100%;}
+    fieldset, fieldset > fieldset.form-control {margin-bottom: 0; background: none; margin-right: 0; width: 100%;}
 
     legend {font-size: $font-size-base; border: none;}
 
     ul.optionset, ul.checkboxset {list-style-type: none; margin-bottom: 0;
+
         li {
             * {cursor: pointer;}
         }

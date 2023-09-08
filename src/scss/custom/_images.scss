@@ -10,13 +10,16 @@
 
     .captionImage {
         &.center {width: 100% !important;}
+
         &.right {float: right; max-width: 50%;
             img {float: none; clear: both; max-width: 95% !important;}
             p {margin-left: 5%;}
         }
+
         &.left {float: left; max-width: 50%;
             img {float: none; clear: both; max-width: 95% !important;}
         }
+
         &.left, &.right {
             p {max-width: 95% !important;}
         }
