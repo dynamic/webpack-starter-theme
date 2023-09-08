@@ -26,10 +26,9 @@
     },
     "extra": {
         "expose": [
-            "css",
-            "javascript",
-            "src",
+            "dist",
             "fonts",
+            "icons",
             "images"
         ]
     }

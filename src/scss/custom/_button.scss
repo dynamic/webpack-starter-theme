@@ -1,4 +1,4 @@
-.btn {text-transform: uppercase; min-width: 150px; font-size: 20px;  font-family: lft-etica-compressed, sans-serif; font-weight: 700; font-style: normal; text-transform: uppercase;  border-radius: 0; padding: 14px;
+.btn { min-width: 150px; font-size: 20px;  font-family: lft-etica-compressed, sans-serif; font-weight: 700; font-style: normal; text-transform: uppercase;  border-radius: 0; padding: 14px;
 
     &.btn-primary{background: $primary; color: $white; background-position: 0 -100%; background-repeat: repeat-x; transition: background-position 1s ease;
         &:hover, &:focus {background: $secondary;}

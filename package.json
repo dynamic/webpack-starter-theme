@@ -1,56 +1,49 @@
 {
   "name": "webpack-starter-theme",
   "version": "1.0.0",
-  "description": "",
+  "description": "Silverstripe theme using Bootstrap 5",
+  "main": ".eslintrc.js",
+  "dependencies": {
+    "@popperjs/core": "^2.11.8",
+    "bootstrap": "^5.3.1"
+  },
   "devDependencies": {
-    "@fortawesome/fontawesome-free": "^5.12.1",
-    "babel-cli": "^6.26.0",
-    "babel-core": "^6.26.3",
-    "babel-loader": "^8.0.6",
-    "babel-preset-es2015": "^6.24.1",
-    "bootstrap": "5.2",
-    "clean-webpack-plugin": "^4.0.0",
-    "css-loader": "^6.7.1",
-    "css-minimizer-webpack-plugin": "^4.0.0",
-    "eslint": "^8.4.1",
+    "autoprefixer": "^10.4.15",
+    "css-loader": "^6.8.1",
+    "eslint": "^8.48.0",
     "eslint-config-airbnb-base": "^15.0.0",
-    "eslint-import-resolver-webpack": "^0.13.2",
-    "eslint-plugin-import": "^2.25.3",
-    "eslint-webpack-plugin": "^3.1.1",
-    "imagesloaded": "^5.0.0",
-    "jquery": "^3.5.0",
-    "matchheight": "^0.1.2",
-    "mini-css-extract-plugin": "^2.6.1",
-    "node-sass": "^7.0.0",
-    "popper.js": "^1.15.0",
-    "postcss-loader": "^7.0.1",
-    "postcss-scss": "^4.0.4",
-    "sass-loader": "^13.0.2",
-    "style-loader": "^3.3.1",
-    "stylelint": "^14.1.0",
-    "stylelint-config-standard": "^24.0.0",
-    "stylelint-webpack-plugin": "^3.1.0",
-    "tether": "^2.0.0",
+    "eslint-import-resolver-webpack": "^0.13.7",
+    "eslint-plugin-import": "^2.28.1",
+    "eslint-webpack-plugin": "^4.0.1",
+    "mini-css-extract-plugin": "^2.7.6",
+    "postcss-loader": "^7.3.3",
+    "postcss-scss": "^4.0.7",
+    "sass": "^1.66.1",
+    "sass-loader": "^13.3.2",
+    "style-loader": "^3.3.3",
+    "stylelint": "^15.10.3",
+    "stylelint-config-standard": "^34.0.0",
+    "stylelint-webpack-plugin": "^4.1.1",
     "webpack": "^5.88.2",
-    "webpack-cli": "^4.10.0",
-    "webpack-dev-server": "^4.9.3",
-    "webpack-merge": "^5.8.0"
+    "webpack-cli": "^5.1.4"
   },
   "scripts": {
-    "build": "NODE_ENV=production webpack --config webpack.prod.js",
-    "dev": "NODE_ENV=development webpack --config webpack.dev.js --stats-error-details",
-    "watch": "NODE_ENV=development webpack serve --open --config webpack.dev.js --watch --progress",
-    "start": "NODE_ENV=development webpack serve --open --config webpack.dev.js",
+    "build": "webpack build --mode=production",
+    "dev": "webpack --watch --stats-error-details",
     "lint:styles": "stylelint src/scss/**/*.scss",
-    "lint:styles:fix": "stylelint src/scss/**/*.scss --fix",
-    "lint:scripts": "eslint src/javascript/**/*.js",
-    "lint:scripts:fix": "eslint src/javascript/**/*.js --fix"
+    "lint:styles:fix": "stylelint src/scss/**/*.scss --fix || echo \"lint faild for some file(s).\"",
+    "lint:scripts": "eslint src/js/*.js",
+    "lint:scripts:fix": "eslint src/js/*.js --fix"
   },
-  "dependencies": {
-    "@popperjs/core": "^2.11.6",
-    "@splidejs/splide": "^4.1.4",
-    "@splidejs/splide-extension-auto-scroll": "^0.5.3"
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dynamic/webpack-starter-theme.git"
   },
+  "keywords": [],
   "author": "",
-  "license": "ISC"
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/dynamic/webpack-starter-theme/issues"
+  },
+  "homepage": "https://github.com/dynamic/webpack-starter-theme#readme"
 }

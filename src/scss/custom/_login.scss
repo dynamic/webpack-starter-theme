@@ -12,6 +12,6 @@ label, a { color: $primary;}
 
 #ForgotPassword { margin: 10px 0 0; text-align: center; }
 
-@media only screen and (max-width: 767px) {
+@media only screen and (width <= 767px) {
     .layout.loginForm{width: 290px !important;}
 }
