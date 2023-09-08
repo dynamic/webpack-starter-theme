@@ -31,9 +31,7 @@
     "build": "webpack build --mode=production",
     "dev": "webpack --watch --stats-error-details",
     "lint:styles": "stylelint src/scss/**/*.scss",
-    "lint:styles:fix": "stylelint src/scss/**/*.scss --fix || echo \"lint faild for some file(s).\"",
-    "lint:scripts": "eslint src/js/*.js",
-    "lint:scripts:fix": "eslint src/js/*.js --fix"
+    "lint:styles:fix": "stylelint src/scss/**/*.scss --fix || echo \"lint faild for some file(s).\""
   },
   "repository": {
     "type": "git",
