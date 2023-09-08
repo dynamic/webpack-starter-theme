@@ -18,8 +18,12 @@
     <% include FontKit %>
 
     <% include CustomStyles %>
+
+    <% include Innoweb/GoogleAnalytics/GoogleAnalyticsHead %>
 </head>
 <body class="$ClassName.ShortName loading<% if $SiteConfig.UtilityLinks %> has-util<% end_if %>">
+
+    <% include Innoweb/GoogleAnalytics/GoogleAnalyticsBody %>
 
     <% include NavBar %>
 
