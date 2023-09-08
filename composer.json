@@ -26,10 +26,7 @@
     },
     "extra": {
         "expose": [
-            "dist",
-            "fonts",
-            "icons",
-            "images"
+            "dist"
         ]
     }
 }
