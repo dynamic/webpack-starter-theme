@@ -1,7 +1,12 @@
-<div class="element-area home-element-area">
-$ElementalHomePage
+<div class="row">
+    <div class="col-md-12 mb-5">
+        $ElementalHomePage
+    </div>
 </div>
-
-$Form
-$CommentsForm
+<div class="row">
+    <div class="col-md-12 mb-5">
+        $Form
+        $CommentsForm
+    </div>
+</div>
 

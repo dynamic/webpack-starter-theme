@@ -25,8 +25,9 @@
 
     <main>
         <% include Carousel %>
-
+        <div class="container">
             $Layout
+        </div>
     </main>
 
     <%-- <% include Footer %> --%>
