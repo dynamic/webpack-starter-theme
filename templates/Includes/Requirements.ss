@@ -1,7 +1,7 @@
 <%-- CSS Imports --%>
-<% require themedCSS('css/bundlecss') %>
+<% require themedCSS('dist/main') %>
 
 <%-- JavaScript Imports --%>
-<% require themedJavascript("javascript/bundle") %>
+<% require themedJavascript("dist/main") %>
 
 <link rel="stylesheet" href="https://kit.fontawesome.com/0cd4f2631d.css" crossorigin="anonymous">

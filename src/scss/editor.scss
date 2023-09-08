@@ -6,6 +6,7 @@
 // Configuration
 @import "../../node_modules/bootstrap/scss/functions";
 @import "../../node_modules/bootstrap/scss/variables";
+@import "../../node_modules/bootstrap/scss/variables-dark.scss";
 @import "../../node_modules/bootstrap/scss/maps";
 
 @import 'custom/fonts';
@@ -55,12 +56,8 @@
 // scss-docs-end import-stack
 
 // Default theme
-@import '../../node_modules/@splidejs/splide/dist/css/splide.min.css';
 
 // or other themes
-@import '../../node_modules/@splidejs/splide/dist/css/themes/splide-default.min.css';
-@import '../../node_modules/@splidejs/splide/dist/css/themes/splide-skyblue.min.css';
-@import '../../node_modules/@splidejs/splide/dist/css/themes/splide-sea-green.min.css';
 
 @import 'theme';
 
