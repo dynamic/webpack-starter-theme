@@ -34,8 +34,7 @@
         </div>
     </main>
 
-    <%-- <% include Footer %> --%>
-    <% include FooterAlt %>
+    <% include Footer %>
 
     $BetterNavigator
 
