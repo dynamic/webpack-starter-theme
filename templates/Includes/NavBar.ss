@@ -6,14 +6,14 @@
             </div>
             <div class="col-md-10">
                 <% if $SiteConfig.UtilityLinks %>
-                    <% cached 'utilnavigation', $List('SilverStripe\CMS\Model\SiteTree').max('LastEdited'), $List('SilverStripe\CMS\Model\SiteTree').count() unless $CurrentUser %>
+                    <% cached 'utilnavigation', $ID, $List('SilverStripe\CMS\Model\SiteTree').max('LastEdited'), $List('SilverStripe\CMS\Model\SiteTree').count() unless $CurrentUser %>
                     <nav class="navbar navbar-expand-lg navbar-dark bg-dark utility-nav">
                         <div class="container">
                             <div class="collapse navbar-collapse" id="utilityNav">
                                 <ul class="navbar-nav ms-auto">
                                     <% loop $SiteConfig.UtilityLinks %>
-                                        <li class="nav-item<% if $isSection || $isCurrent %> active<% end_if %>">
-                                            <a href="$Link" class="nav-link fs-6" title="Go to the $MenuTitle.XML page">$MenuTitle.XML</a>
+                                        <li class="nav-item">
+                                            <a href="$Link" class="nav-link fs-6<% if $isSection || $isCurrent %> active<% end_if %>"<% if $isCurrent %> aria-current="page"<% end_if %> title="Go to the $MenuTitle.XML page">$MenuTitle.XML</a>
                                         </li>
                                     <% end_loop %>
                                 </ul>
@@ -30,17 +30,19 @@
                     </button>
 
                     <div class="collapse navbar-collapse" id="navbarNav">
-                        <% cached 'navigation', $List('SilverStripe\CMS\Model\SiteTree').max('LastEdited'), $List('SilverStripe\CMS\Model\SiteTree').count(), $CacheBusterTimer %>
+                        <% cached 'navigation', $ID, $List('SilverStripe\CMS\Model\SiteTree').max('LastEdited'), $List('SilverStripe\CMS\Model\SiteTree').count(), $CacheBusterTimer %>
                         <ul class="navbar-nav ms-auto">
                             <% loop Menu(1) %>
-                            <li class="nav-item<% if $Children.exists %> dropdown<% end_if %><% if $isSection || $isCurrent %> active<% end_if %>">
-                                <a class="nav-link<% if $Children.exists %> dropdown-toggle<% end_if %>" <% if $Children.exists %>role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false" <% end_if %>href="$Link">
+                            <li class="nav-item<% if $Children.exists %> dropdown<% end_if %>">
+                                <a class="nav-link<% if $Children.exists %> dropdown-toggle<% end_if %><% if $isSection || $isCurrent %> active<% end_if %>"<% if $isCurrent %> aria-current="page"<% end_if %><% if $Children.exists %>role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false" <% end_if %>href="$Link">
                                     $MenuTitle.XML
                                 </a>
                                     <% if Children %>
-                                        <ul class="dropdown-menu">
+                                        <ul class="dropdown-menu dropdown-menu-dark">
                                             <% loop Children %>
-                                                <li><a href="$Link" class="dropdown-item<% if $isSection || $isCurrent %> active<% end_if %>" title="Go to the $MenuTitle.XML page">$MenuTitle.XML</a></li>
+                                                <li>
+                                                    <a href="$Link" class="dropdown-item<% if $isCurrent %> active<% end_if %>"<% if $isCurrent %> aria-current="page"<% end_if %> title="Go to the $MenuTitle.XML page">$MenuTitle.XML</a>
+                                                </li>
                                             <% end_loop %>
                                         </ul>
                                     <% end_if %>
