@@ -6,15 +6,11 @@
     </div>
 </div>
 <div class="row">
-    <div class="col-md-12 mb-5">
+    <div class="col-md-12 mb-3">
         <h1>$Title</h1>
         <% if $Content %>$Content<% end_if %>
     </div>
-    <div class="col-md-12 mb-5">
+    <div class="col-md-12 mb-3">
         $ElementalArea
-    </div>
-    <div class="col-md-12 mb-5">
-        $Form
-        $CommentsForm
     </div>
 </div>

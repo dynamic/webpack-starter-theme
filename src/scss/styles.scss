@@ -1,16 +1,5 @@
 // override default theme colors. Needs to be done before importing bootstrap
-$theme-colors: (
-  "primary":      #279989,
-  "secondary":    #2E4E99,
-  "success":      #198754,
-  "info":         #0dcaf0,
-  "warning":      #ffc107,
-  "danger":       #dc3545,
-  "light":        #f8f9fa,
-  "dark":         #212529,
-  "dark-primary": #004c45,
-  "green-alt":    #C5E86C,
-);
+@import 'custom/variables';
 
 // Import all of Bootstrap's CSS
 @import "bootstrap/scss/bootstrap";
