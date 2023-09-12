@@ -1,49 +1,56 @@
-<% if $SiteConfig.UtilityLinks %>
-    <% cached 'utilnavigation', $List('SilverStripe\CMS\Model\SiteTree').max('LastEdited'), $List('SilverStripe\CMS\Model\SiteTree').count() unless $CurrentUser %>
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark m-0 p-0 utility-nav">
-        <div class="container">
-            <div class="collapse navbar-collapse" id="utilityNav">
-                <ul class="navbar-nav ms-auto">
-                    <% loop $SiteConfig.UtilityLinks %>
-                        <li class="nav-item $LinkingMode">
-                            <a href="$Link" class="nav-link fs-6" title="Go to the $MenuTitle.XML page">$MenuTitle.XML</a>
-                        </li>
-                    <% end_loop %>
-                </ul>
+<div class="bg-dark">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-2">
+                <% include NavBarBranding %>
+            </div>
+            <div class="col-md-10">
+                <% if $SiteConfig.UtilityLinks %>
+                    <% cached 'utilnavigation', $List('SilverStripe\CMS\Model\SiteTree').max('LastEdited'), $List('SilverStripe\CMS\Model\SiteTree').count() unless $CurrentUser %>
+                    <nav class="navbar navbar-expand-lg navbar-dark bg-dark utility-nav">
+                        <div class="container">
+                            <div class="collapse navbar-collapse" id="utilityNav">
+                                <ul class="navbar-nav ms-auto">
+                                    <% loop $SiteConfig.UtilityLinks %>
+                                        <li class="nav-item $LinkingMode">
+                                            <a href="$Link" class="nav-link fs-6" title="Go to the $MenuTitle.XML page">$MenuTitle.XML</a>
+                                        </li>
+                                    <% end_loop %>
+                                </ul>
+                            </div>
+                        </div>
+                    </nav>
+                    <% end_cached %>
+                <% end_if %>
+
+                <nav class="navbar navbar-expand-lg navbar-dark bg-dark<% if $SiteConfig.UtilityLinks %> has-util<% end_if %>">
+
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+
+                    <div class="collapse navbar-collapse" id="navbarNav">
+                        <% cached 'navigation', $List('SilverStripe\CMS\Model\SiteTree').max('LastEdited'), $List('SilverStripe\CMS\Model\SiteTree').count(), $CacheBusterTimer %>
+                        <ul class="navbar-nav ms-auto">
+                            <% loop Menu(1) %>
+                            <li class="nav-item<% if $Children.exists %> dropdown<% end_if %> $LinkingMode">
+                                <a class="nav-link<% if $Children.exists %> dropdown-toggle<% end_if %>" <% if $Children.exists %>role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false" <% end_if %>href="$Link">
+                                    $MenuTitle.XML
+                                </a>
+                                    <% if Children %>
+                                        <ul class="dropdown-menu">
+                                            <% loop Children %>
+                                                <li><a href="$Link" class="dropdown-item $LinkingMode" title="Go to the $MenuTitle.XML page">$MenuTitle.XML</a></li>
+                                            <% end_loop %>
+                                        </ul>
+                                    <% end_if %>
+                                </li>
+                            <% end_loop %>
+                        </ul>
+                        <% end_cached %>
+                    </div>
+                </nav>
             </div>
         </div>
-    </nav>
-    <% end_cached %>
-<% end_if %>
-
-<nav class="navbar navbar-expand-lg navbar-dark bg-dark<% if $SiteConfig.UtilityLinks %> has-util<% end_if %>">
-    <div class="container">
-
-        <% include NavBarBranding %>
-
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-
-        <div class="collapse navbar-collapse" id="navbarNav">
-            <% cached 'navigation', $List('SilverStripe\CMS\Model\SiteTree').max('LastEdited'), $List('SilverStripe\CMS\Model\SiteTree').count(), $CacheBusterTimer %>
-            <ul class="navbar-nav ms-auto">
-                <% loop Menu(1) %>
-                <li class="nav-item<% if $Children.exists %> dropdown<% end_if %> $LinkingMode">
-                    <a class="nav-link<% if $Children.exists %> dropdown-toggle<% end_if %>" <% if $Children.exists %>role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false" <% end_if %>href="$Link">
-                        $MenuTitle.XML
-                    </a>
-                        <% if Children %>
-                            <ul class="dropdown-menu">
-                                <% loop Children %>
-                                    <li><a href="$Link" class="dropdown-item $LinkingMode" title="Go to the $MenuTitle.XML page">$MenuTitle.XML</a></li>
-                                <% end_loop %>
-                            </ul>
-                        <% end_if %>
-                    </li>
-                <% end_loop %>
-            </ul>
-            <% end_cached %>
-        </div>
     </div>
-</nav>
+</div>
