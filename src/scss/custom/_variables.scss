@@ -76,3 +76,6 @@ $theme-colors: (
   "dark":                       $dark,
   "dark-primary":               $dark-primary,
 );
+
+// scss-docs-start theme-color-levels
+$min-contrast-ratio:   3;
