@@ -1,36 +1,15 @@
-<div class="post-summary">
-    <h2>
-        <a href="$Link" title="<%t Blog.ReadMoreAbout "Read more about '{title}'..." title=$Title %>">
-        <% if $MenuTitle %>$MenuTitle<% else %>$Title<% end_if %>
-        </a>
-    </h2>
-
-    <% include EntryMeta %>
-
-    <% if $PreviewImage || $FeaturedImage %>
-        <div class="mb-1">
-            <a href="$Link" title="<%t Blog.ReadMoreAbout "Read more about '{title}'..." title=$Title %>">
-                <% if $PreviewImage %>
-                    <img src="$PreviewImage.Fill(767,300).URL" alt="$PreviewImage.Title.ATT" class="img-fluid">
-                <% else %>
-                    <img src="$FeaturedImage.Fill(767,300).URL" alt="$FeaturedImage.Title.ATT" class="img-fluid">
-                <% end_if %>
+<div class="col-lg-4 col-md-6 col-sm-12 mb-3 element__promos__item">
+    <div class="card h-100">
+        <% if $FeaturedImage %>
+            <a href="$Link" title="Read $MenuTitle.ATT">
+                <img src="$FeaturedImage.FocusFill(500,330).URL" class="card-img-top" alt="$Image.Title.ATT">
             </a>
+        <% end_if %>
+        <div class="card-body">
+            <h3 class="card-title">$Title</a></h3>
+            <% include SilverStripe\\Blog\\EntryMeta %>
+            <% if $Summary %><div class="card-text">$Summary</div><% end_if %>
+            <p><a href="$Link.ATT" class="btn btn-outline-primary">Read more</a></p>
         </div>
-    <% end_if %>
-
-    <% if $Abstract %>
-        $Abstract
-    <% else_if $FirstContent %>
-        <p>$FirstContent.FirstParagraph()</p>
-    <% else %>
-        <p>$Content.FirstParagraph()</p>
-    <% end_if %>
-
-    <p>
-        <a href="$Link" title="<%t Blog.ReadMoreAbout "Read more about '{title}'..." title=$Title %>" class="GA-read-more">
-            <%t Blog.ReadMoreAbout "Read more about '{title}'..." title=$Title %>
-        </a>
-    </p>
-
+    </div>
 </div>
