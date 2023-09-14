@@ -34,7 +34,7 @@
                         <ul class="navbar-nav ms-auto">
                             <% loop Menu(1) %>
                             <li class="nav-item<% if $Children.exists %> dropdown<% end_if %>">
-                                <a class="nav-link<% if $Children.exists %> dropdown-toggle<% end_if %><% if $isSection || $isCurrent %> active<% end_if %>"<% if $isCurrent %> aria-current="page"<% end_if %><% if $Children.exists %>role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false" <% end_if %>href="$Link">
+                                <a class="nav-link fs-5<% if $Children.exists %> dropdown-toggle<% end_if %><% if $isSection || $isCurrent %> active<% end_if %>"<% if $isCurrent %> aria-current="page"<% end_if %><% if $Children.exists %>role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false" <% end_if %>href="$Link">
                                     $MenuTitle.XML
                                 </a>
                                     <% if Children %>
