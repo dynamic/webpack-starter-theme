@@ -20,7 +20,7 @@
     <% include NavBar %>
 
     <main>
-        <% include Carousel %>
+        <% include Dynamic/Carousel/Carousel %>
         <div class="container">
             $Layout
         </div>
