@@ -1,7 +1,9 @@
 
-<!--<h1>$Title</h1>
-<% if $SubTitle %><h2>$SubTitle</h2><% end_if %>
--->
+<h1>$Title</h1>
+
+<div class="typography">
+    $Content
+</div>
 
 <div class="element-area main-element-area">
     $ElementalArea
