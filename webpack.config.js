@@ -4,6 +4,7 @@
 const path = require('path')
 const autoprefixer = require('autoprefixer')
 const MiniCssExtractPlugin = require('mini-css-extract-plugin')
+const BrowserSyncPlugin = require('browser-sync-webpack-plugin')
 
 // Export configuration
 module.exports = {
@@ -19,6 +20,16 @@ module.exports = {
     new MiniCssExtractPlugin({
         filename: 'css/[name].bundle.css',
     }),
+    new BrowserSyncPlugin({
+      host: 'localhost',
+      port: 3000,
+      files: [
+        './dist/css/main.bundle.css',
+        './dist/js/main.bundle.js',
+        './templates/**/*.{ss,html}',
+      ],
+      proxy: 'http://starter-theme.test/',
+    }, { reload: true }),
   ],
   module: {
     rules: [
