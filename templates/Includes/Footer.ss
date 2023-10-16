@@ -6,7 +6,7 @@
                     <div class="row">
                         <% if $NavigationColumns %>
                             <% loop $NavigationColumns.Limit(3) %>
-                                <div class="col-md-3">
+                                <div class="col-md-4">
                                     <nav class="footerNav">
                                         <% loop $NavigationGroups %>
                                             <% if $NavigationLinks.Count %>
@@ -23,36 +23,10 @@
                                 </div>
                             <% end_loop %>
                         <% end_if %>
-                        <% if $SocialLinks %>
-                            <div class="col-md-3 social-links">
-                                <ul class="list-group list-group-horizontal">
-                                    <% loop $SocialLinks %>
-                                        <li class="list-group-item">
-                                            <a href="$Link" title="Go to {$SiteConfig.CompanyName}&apos;s $Site page" class="$Site">
-                                                <% if $Site == 'facebook' %>
-                                                    <i class="fab fa-facebook-f"></i>
-                                                <% else_if $Site == 'twitter' %>
-                                                    <i class="fab fa-twitter"></i>
-                                                <% else_if $Site == 'youtube' %>
-                                                    <i class="fab fa-youtube"></i>
-                                                <% else_if $Site == 'linkedin' %>
-                                                    <i class="fab fa-linkedin-in"></i>
-                                                <% else_if $Site == 'pinterest' %>
-                                                    <i class="fab fa-pinterest-p"></i>
-                                                <% else_if $Site == 'instagram' %>
-                                                    <i class="fab fa-instagram"></i>
-                                                <% else %>
-                                                    $Title
-                                                <% end_if %>
-                                            </a>
-                                        </li>
-                                    <% end_loop %>
-                                </ul>
-                            </div>
-                        <% end_if %>
                     </div>
                 </div>
                 <div class="col-md-3">
+                    <div class="px-3 px-md-0">
                     <% if $SocialMetaSiteName || $MicroDataStreetAddress %>
                         <% if $SocialMetaSiteName %><h5>$SocialMetaSiteName</h5><% end_if %>
                         <% if $MicroDataStreetAddress %><p class="mb-0">$MicroDataStreetAddress</p><% end_if %>
@@ -60,6 +34,34 @@
                         <% if $MicroDataPhone %><p class="mb-0"><a href="tel:$MicroDataPhone" title="Call $MicroDataPhone">$MicroDataPhone</a></p><% end_if %>
                         <% if $MicroDataEmail %><p class="mb-0"><a href="mailto:$MicroDataEmail" title="Email $MicroDataEmail">Email Us</a></p><% end_if %>
                     <% end_if %>
+                    <% if $SocialLinks %>
+                        <div class="social-links mt-3">
+                            <ul class="list-group list-group-horizontal">
+                                <% loop $SocialLinks %>
+                                    <li class="list-group-item">
+                                        <a href="$Link" title="Go to {$SiteConfig.CompanyName}&apos;s $Site page" class="$Site">
+                                            <% if $Site == 'facebook' %>
+                                                <i class="fab fa-facebook-f"></i>
+                                            <% else_if $Site == 'twitter' %>
+                                                <i class="fab fa-twitter"></i>
+                                            <% else_if $Site == 'youtube' %>
+                                                <i class="fab fa-youtube"></i>
+                                            <% else_if $Site == 'linkedin' %>
+                                                <i class="fab fa-linkedin-in"></i>
+                                            <% else_if $Site == 'pinterest' %>
+                                                <i class="fab fa-pinterest-p"></i>
+                                            <% else_if $Site == 'instagram' %>
+                                                <i class="fab fa-instagram"></i>
+                                            <% else %>
+                                                $Title
+                                            <% end_if %>
+                                        </a>
+                                    </li>
+                                <% end_loop %>
+                            </ul>
+                        </div>
+                    <% end_if %>
+                    </div>
                 </div>
             <% end_with %>
         </div>
