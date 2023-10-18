@@ -1,9 +1,11 @@
+/* eslint-disable import/no-unresolved */
 /* eslint-disable indent */
 'use strict'
 
 const path = require('path')
 const autoprefixer = require('autoprefixer')
 const MiniCssExtractPlugin = require('mini-css-extract-plugin')
+const ESLintPLugin = require('eslint-webpack-plugin')
 
 // Export configuration
 module.exports = {
@@ -19,6 +21,7 @@ module.exports = {
     new MiniCssExtractPlugin({
         filename: 'css/[name].bundle.css',
     }),
+    new ESLintPLugin(),
   ],
   module: {
     rules: [
