@@ -3,7 +3,7 @@
 When writing FE code, in addition to [HTML], you will write code using the following languages/libraries:
 
 * [**Silverstripe:**](./Silverstripe.md) All markup should utilize semantic HTML, **no exceptions**.
-* [**Bootstrap:**](./Bootstrap.md) All styles are should be keeping Bootstrap in mind
+* [**Styling:**](./Styling.md) All styles are should be keeping Bootstrap in mind
 * [**JavaScript:**](./JavaScript.md) By default, we use vanilla JS to add functionality to our components. With Bootstrap5 dropping jQuery as a dependency, we shouldn't bulk up our bundle by adding jQuery.
 
 ## Basic Guidelines
@@ -87,5 +87,3 @@ const arrayChunks = (array, itemsPerChunk = 3)=> {
   return temparray;
 }
 ```
-
-Of course, any developer could just read either function above and understand what's going on. But remember that we should **optimize for developer happiness**; If we can save the next developer 3 minutes by adding a couple of sentences to our code, why not do it?
