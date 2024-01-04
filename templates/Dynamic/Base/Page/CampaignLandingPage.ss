@@ -5,41 +5,25 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     $MetaTags(false)
 
-    <title><% if $PageTitle %>$PageTitle<% else %>$Title &#124; $SiteConfig.CompanyName<% end_if %></title>
+    <title><% if $PageTitle %>$PageTitle<% else %>$Title &#124; $SiteConfig.Title<% end_if %></title>
 
     <% include Favicons %>
-
-    <% if $ClassName.ShortName = Blog %>
-        <link rel="canonical" href="$AbsoluteLink" />
-    <% end_if %>
-
-    <% require themedCSS("dist/css/app") %>
-
+    <% if $ClassName.ShortName = Blog %><link rel="canonical" href="$AbsoluteLink" /><% end_if %>
+    <% include Requirements %>
     <% include FontKit %>
-
-    <% include Analytics %>
-
     <% include CustomStyles %>
+    <% include Innoweb/GoogleAnalytics/GoogleAnalyticsHead %>
 </head>
-<body class="$ClassName loading">
+<body class="$ClassName.ShortName">
 
-    <% include AnalyticsBody %>
+    <% include Innoweb/GoogleAnalytics/GoogleAnalyticsBody %>
 
     <main role="main">
-        <div class="container">
-            <div class="row">
-                <div class="col-sm-12">
-                    <div class="element-area main-element-area">
-                        $ElementalArea
-                    </div>
-                </div>
-            </div>
+        <div class="element-area main-element-area">
+            $ElementalArea
         </div>
     </main>
 
     $BetterNavigator
-
-    <% include HubspotIntegration %>
-
 </body>
 </html>

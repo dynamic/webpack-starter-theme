@@ -21,9 +21,7 @@
 
     <main>
         <% include Dynamic/Carousel/Carousel %>
-        <div class="container">
-            $Layout
-        </div>
+        $Layout
     </main>
 
     <% include Footer %>
