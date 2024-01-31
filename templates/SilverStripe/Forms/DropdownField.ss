@@ -9,11 +9,3 @@
     <% end_loop %>
     </select>
 </div>
-
-<% require javascript($resourceURL('themes/silverstripe-starter-theme/src/javascript/thirdparty/select2.min.js')) %>
-<% require customScript('
-    jQuery(document).ready(function() {
-        jQuery(".selecttwo select").select2();
-        jQuery(".select2-container").addClass("form-control");
-    });
-') %>
