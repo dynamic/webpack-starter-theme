@@ -1,3 +1,4 @@
+<% cached 'footer', $CacheKey, $SiteConfig.CacheKey %>
 <footer class="bg-light p-3">
     <div class="container">
         <div class="row">
@@ -74,3 +75,4 @@
         </div>
     </div>
 </footer>
+<% end_cached %>

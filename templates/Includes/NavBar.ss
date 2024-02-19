@@ -1,3 +1,4 @@
+<% cached 'navbar', $CacheKey, $SiteConfig.CacheKey %>
 <div class="bg-dark">
   <div class="container">
     <nav class="navbar navbar-dark bg-dark navbar-expand-lg">
@@ -9,7 +10,6 @@
         </button>
 
         <% if $SiteConfig.UtilityLinks %>
-          <% cached 'utilnavigation', $ID, $List('SilverStripe\CMS\Model\SiteTree').max('LastEdited'), $List('SilverStripe\CMS\Model\SiteTree').count() unless $CurrentUser %>
           <nav class="navbar navbar-expand-lg navbar-dark bg-dark utility-nav d-none d-lg-block position-absolute top-0 end-0 pe-3">
               <div class="container">
                   <div class="collapse navbar-collapse" id="utilityNav">
@@ -23,7 +23,6 @@
                   </div>
               </div>
           </nav>
-          <% end_cached %>
         <% end_if %>
 
         <div class="offcanvas offcanvas-end text-bg-dark" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
@@ -51,7 +50,6 @@
               <% end_loop %>
               <hr class="border-light d-lg-none">
               <% if $SiteConfig.UtilityLinks %>
-                <% cached 'utilnavigation', $ID, $List('SilverStripe\CMS\Model\SiteTree').max('LastEdited'), $List('SilverStripe\CMS\Model\SiteTree').count() unless $CurrentUser %>
                   <% loop $SiteConfig.UtilityLinks %>
                   <li class="nav-item d-lg-none">
                     <a href="$Link" class="nav-link<% if $isSection || $isCurrent %> active<% end_if %>"<% if $isCurrent %> aria-current="page"<% end_if %>>
@@ -59,7 +57,6 @@
                     </a>
                   </li>
                   <% end_loop %>
-                <% end_cached %>
               <% end_if %>
             </ul>
           </div>
@@ -68,3 +65,4 @@
     </nav>
   </div>
 </div>
+<% end_cached %>
