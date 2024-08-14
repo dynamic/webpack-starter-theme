@@ -1,4 +1,4 @@
-<% if $Title && $ShowTitle %><$TitleTag class="element__title $TitleSizeClass">$Title</$TitleTag><% end_if %>
+<% if $Title && $ShowTitle %><h2 class="element__title">$Title</h2><% end_if %>
 <% if $Content %><div class="element__content">$Content</div><% end_if %>
 
 <% if $PromoList %>
@@ -7,7 +7,7 @@
             <div class="col-lg-3 col-md-4 col-6 mb-3 element__promos__item">
                 <div class="card h-100">
                     <% if $Image %>
-                        <% if $ElementLink %><a href="$ElementLink.LinkURL" title="Go to $ElementLink.Title.ATT"><% end_if %>
+                        <% if $ElementLink %><a href="$ElementLink.URL" title="$ElementLink.Title"<% if $ElementLink.OpenInNew %> target="_blank" rel="noopener noreferrer"<% end_if %>><% end_if %>
                             <img src="$Image.FocusFill(500,330).URL" class="card-img-top" alt="$Image.Title.ATT">
                         <% if $ElementLink %></a><% end_if %>
                     <% end_if %>
