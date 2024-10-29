@@ -20,5 +20,5 @@
 <%--<% require javascript($resourceURL('themes/silverstripe-starter-theme/src/javascript/thirdparty/jquery.validate.min.js')) %>--%>
 <% require javascript('silverstripe/admin: client/dist/js/i18n.js') %>
 <% require javascript('silverstripe/userforms: client/lang/en.js') %>
-<% require javascript('silverstripe/userforms: client/lang/en_US.js') %>
+<%--<% require javascript('silverstripe/userforms: client/lang/en_US.js') %>--%>
 <% require javascript('silverstripe/userforms: client/dist/js/userforms.js') %>
