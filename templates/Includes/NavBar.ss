@@ -16,7 +16,7 @@
                       <ul class="navbar-nav ms-auto">
                           <% loop $SiteConfig.UtilityLinks %>
                               <li class="nav-item">
-                                  <a href="$Link" class="nav-link<% if $isSection || $isCurrent %> active<% end_if %>"<% if $isCurrent %> aria-current="page"<% end_if %> title="Go to the $MenuTitle.XML page">$MenuTitle.XML</a>
+                                  <a href="$Link" class="nav-link<% if $isSection || $isCurrent %> active<% end_if %>"<% if $isCurrent %> aria-current="page"<% end_if %> title="Go to the $MenuTitle.XML page">$Title.XML</a>
                               </li>
                           <% end_loop %>
                       </ul>
@@ -55,7 +55,7 @@
                   <% loop $SiteConfig.UtilityLinks %>
                   <li class="nav-item d-lg-none">
                     <a href="$Link" class="nav-link<% if $isSection || $isCurrent %> active<% end_if %>"<% if $isCurrent %> aria-current="page"<% end_if %>>
-                      $MenuTitle.XML
+                      $Title.XML
                     </a>
                   </li>
                   <% end_loop %>
