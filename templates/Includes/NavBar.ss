@@ -16,7 +16,7 @@
                       <ul class="navbar-nav ms-auto">
                           <% loop $SiteConfig.UtilityLinks %>
                               <li class="nav-item">
-                                  <a href="$Link" class="nav-link<% if $isSection || $isCurrent %> active<% end_if %>"<% if $isCurrent %> aria-current="page"<% end_if %> title="Go to the $MenuTitle.XML page">$Title.XML</a>
+                                  <a href="$URL" class="nav-link" title="$Title"<% if $OpenInNew %> target="_blank" rel="noopener noreferrer"<% end_if %>>$Title</a>
                               </li>
                           <% end_loop %>
                       </ul>
@@ -54,9 +54,7 @@
                 <% cached 'utilnavigation', $ID, $List('SilverStripe\CMS\Model\SiteTree').max('LastEdited'), $List('SilverStripe\CMS\Model\SiteTree').count() unless $CurrentUser %>
                   <% loop $SiteConfig.UtilityLinks %>
                   <li class="nav-item d-lg-none">
-                    <a href="$Link" class="nav-link<% if $isSection || $isCurrent %> active<% end_if %>"<% if $isCurrent %> aria-current="page"<% end_if %>>
-                      $Title.XML
-                    </a>
+                    <a href="$URL" class="nav-link" title="$Title"<% if $OpenInNew %> target="_blank" rel="noopener noreferrer"<% end_if %>>$Title</a>
                   </li>
                   <% end_loop %>
                 <% end_cached %>
