@@ -1,6 +1,6 @@
 <div class="container">
     <div class="row">
-        <div class="col-md-12 mb-3">
+        <div class="col-md-12 mt-3 mb-3">
             $Breadcrumbs(20, false, false, true)
             <h1>$CurrentProfile.FirstName $CurrentProfile.Surname</h1>
             <div class="row">

@@ -1,7 +1,11 @@
 <div class="container">
     <div class="row">
-        <div class="col-md-<% if $SideBarView %>9<% else %>12<% end_if %> mt-3">
-            $Breadcrumbs(20, false, false, true)
+        <div class="row">
+            <div class="col-md-12 mt-3">
+                $Breadcrumbs(20, false, false, true)
+            </div>
+        </div>
+        <div class="col-md-<% if $SideBarView %>9<% else %>12<% end_if %> mb-3">
             <article role="article">
                 <h1>$Title</h1>
                 <% include SilverStripe\\Blog\\EntryMeta %>

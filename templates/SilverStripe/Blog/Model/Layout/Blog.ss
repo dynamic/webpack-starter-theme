@@ -1,6 +1,10 @@
 <section class="section">
     <div class="container">
-        $Breadcrumbs(20, false, false, true)
+        <div class="row">
+            <div class="col-md-12 mt-3 mb-3">
+                $Breadcrumbs(20, false, false, true)
+            </div>
+        </div>
         <h1>
             <% if $ArchiveYear %>
                 <%t SilverStripe\\Blog\\Model\\Blog.Archive 'Archive' %>:
