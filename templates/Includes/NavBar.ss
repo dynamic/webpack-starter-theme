@@ -1,6 +1,6 @@
 <div class="bg-dark">
   <div class="container">
-    <nav class="navbar navbar-dark bg-dark navbar-expand-lg">
+    <nav class="navbar navbar-dark bg-dark navbar-expand-lg mb-3">
       <div class="container-fluid">
         <% include NavBarBranding %>
 
