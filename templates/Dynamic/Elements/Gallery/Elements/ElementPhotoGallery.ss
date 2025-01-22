@@ -1,3 +1,4 @@
+<% if $TopTitle %><div class="top-title text-small">{$TopTitle}</div><% end_if %>
 <% if $Title && $ShowTitle %><$TitleTag class="element__title $TitleSizeClass">$Title</$TitleTag><% end_if %>
 
 <div class="row" id="gallery-{$ID}" data-bs-toggle="modal" data-bs-target="#galleryModal-{$ID}">
