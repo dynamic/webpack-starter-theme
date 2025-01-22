@@ -22,7 +22,7 @@
 
                 <% if $ElementLink %>
                 <div class="ele-link make-center">
-                    <a href="$ElementLink.URL" class="btn btn-lg btn-light<% if $ElementLink.LoanSpeedBump %> loan-speed-bump<% end_if %>" title="$ElementLink.Title"<% if $ElementLink.OpenInNew %> target="_blank" rel="noopener noreferrer"<% end_if %>>$ElementLink.Title</a>
+                    <a href="$ElementLink.URL" class="btn btn-lg btn-light" title="$ElementLink.Title"<% if $ElementLink.OpenInNew %> target="_blank" rel="noopener noreferrer"<% end_if %>>$ElementLink.Title</a>
                 </div>
                 <% end_if %>
             </div>
